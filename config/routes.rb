@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'reviews/new'
+  get 'reviews/create'
   # A visitor can see the list of all restaurants.
   # GET "restaurants"
   # She/He can add a new restaurant, and be redirected to the show view of that new restaurant.

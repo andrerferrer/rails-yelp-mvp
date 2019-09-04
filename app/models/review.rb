@@ -1,5 +1,6 @@
 class Review < ApplicationRecord
   RATING = (0..5).to_a
+  ATTRIBUTES = %i[content rating]
 
   belongs_to :restaurant
   # A review must have a parent restaurant.

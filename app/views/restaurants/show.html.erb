@@ -10,5 +10,17 @@
   <li>
     Category: <%= @restaurant.category %>
   </li>
-
 </ul>
+
+<ol>
+  <% @restaurant.reviews.each do |review| %>
+  <li>
+    <ul>
+      <li>(<%= "*" * review.rating %>) </li>
+      <li><%= review.content %></li>
+    </ul>
+  </li>
+  <% end %>
+</ol>
+
+<%= link_to "Add Reviews", new_restaurant_review_path(@restaurant) %>
